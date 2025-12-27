@@ -1,0 +1,16 @@
+def hamming_distance(s, t):
+    distance = 0
+    
+    for i in range(len(s)):
+        if s[i] != t[i]:
+            distance += 1
+    
+    return distance
+
+with open('hamm.txt', 'r') as file:
+    lines = file.readlines()
+    dna1 = lines[0].strip() 
+    dna2 = lines[1].strip()  
+
+result = hamming_distance(dna1, dna2)
+print(result)

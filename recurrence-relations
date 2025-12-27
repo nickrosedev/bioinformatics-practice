@@ -1,0 +1,17 @@
+n = 32
+k = 5
+
+if n == 1:
+    print(1)
+elif n == 2:
+    print(1)
+else:
+    prev_prev = 1  
+    prev = 1      
+    
+    for month in range(3, n + 1):
+        current = prev + k * prev_prev
+        prev_prev = prev
+        prev = current
+    
+    print(current)
